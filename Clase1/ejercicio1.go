@@ -3,5 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("Mi primer hola mundo en go jaja")
+
+	nombre := "Melany Carrizo"
+	direccion := "Buenos Aires, Argentina"
+	fmt.Println(nombre)
+	fmt.Println(direccion)
 }
