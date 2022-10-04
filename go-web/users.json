@@ -1,0 +1,10 @@
+{
+    "id": 112233,
+    "nombre": "Alejo",
+    "apellido": "Lombardo",
+    "email": "alombardo@gmail.com",
+    "edad": 23,
+    "altura": 1.74,
+    "activo": true,
+    "fecha": "20-10-2022"
+}
