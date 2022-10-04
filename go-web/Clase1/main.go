@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type user struct {
+type User struct {
 	Id       int
 	Nombre   string
 	Apellido string
@@ -17,7 +17,7 @@ type user struct {
 	Fecha    string
 }
 
-var users = []user{
+var users = []User{
 	{
 		Id:       1111,
 		Nombre:   "Mauro",
@@ -30,7 +30,16 @@ var users = []user{
 }
 
 func GetAll(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, users)
+	var filtrados []*User
+
+	for _, u := range users {
+		if ctx.Query("Id") == "u.Id" {
+			filtrados = append(filtrados, &u)
+		}
+	}
+
+	//ctx.String(http.StatusOK, "ID: %s Nombre: %s", Id, Nombre)
+	ctx.JSON(http.StatusOK, filtrados)
 }
 
 func main() {
