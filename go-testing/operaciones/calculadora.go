@@ -1,4 +1,4 @@
-package calculadora
+package operaciones
 
 func Sumar(num1, num2 int) int {
 	return num1 + num2

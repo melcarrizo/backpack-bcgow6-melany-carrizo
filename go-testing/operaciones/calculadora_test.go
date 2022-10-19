@@ -1,4 +1,4 @@
-package calculadora
+package operaciones
 
 import (
 	"testing"
@@ -9,7 +9,7 @@ import (
 func TestRestar(t *testing.T) {
 	n1 := 10
 	n2 := 5
-	esperado := 5
+	esperado := 8
 
 	resultado := Restar(n1, n2)
 
